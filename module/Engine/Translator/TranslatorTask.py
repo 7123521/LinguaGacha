@@ -294,7 +294,7 @@ class TranslatorTask(Base):
         pair = ""
         for src, dst in itertools.zip_longest(srcs, dsts, fillvalue = ""):
             if console == False:
-                pair = pair + "\n" + f"{src} --> {dst}"
+                pair = pair + "\n" + f"{src} -->\n {dst}"
             else:
                 pair = pair + "\n" + f"{markup.escape(src)} [bright_blue]-->[/] {markup.escape(dst)}"
         rows.append(pair.strip())
